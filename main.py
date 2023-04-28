@@ -1,4 +1,13 @@
 import os
+import sys, time 
+
+
+
+def print_slow(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        time.sleep(0.1)
 
 print("""
 888              888    d8b              888b     d888          888                    888888b.                     888      
@@ -13,7 +22,9 @@ print("""
                                                                                                                              
                                                                                                                              
 """)
-input("Press Enter to Start...")
+
+print_slow("Press Enter to Start...")
+input()
 
 os.system('cls||clear')
 
@@ -56,7 +67,9 @@ print("""
                             :JB@@@@@@BB@@@@@BJ^                                 
                          :G&@@@&#B&#G:~G##B&@@@@B7                              
 """)
-your_name = input("Enter name: ")
+
+print_slow("Enter name: ")
+your_name = input("")
 
 os.system('cls||clear')
 
@@ -67,11 +80,53 @@ print(f"""
                             .7B@@@@&BBGGB##&@@@@&##@@&:                         
                            :@@&&@@@@@@&&#&&@@@@@@@&#?                           ============================================
                            ?@@BP#&J~77?5B&&&&P^:!?PJ                         /                                                 
-                           .@@&B#@!    GGGGG#J  :JG&.                       /       "Welcome {your_name}! 
+                           .@@&B#@!    GGGGG#J  :JG&.                       /             G-Day, {your_name}! 
+                            G@@@@#      .~^.   ~ :.~G:                     /      For each round, we'll pick a different                                                  
+            .^:.            P!:~BY      :#~    !?#^..7J:                 <<      category. Answer correctly and you're still        
+           .Y. !~          :G  !.     .   .:7^.  ...:7:7Y    .:^:.         \     in the game. If you're wrong though, 
+           .Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G ^GG#GBGG~        \         it's Game Over... here we go!
+         ..?!  !^            :@B.   .5:::::. .:^~^~^:    &^&BGG5G5GB~        \\
+     :~^!:^P    :J            #B     7&P7^:......:7     ^G^&BBG5BPBB7           =============================================
+  .Y7~:!: .?~.  .&J           ~B      J@&&&#B??Y^:.     G~ ?#&G#&#G#5!!?.       
+  G~.:.~ ..     P5G7           P.      ^GPYYPJ757. :   75    :?#?!Y5.^7?7!      
+  Y5:::::^:JB&~?J!!#^         .Y#        .^~~~~^: .5  !5      !~ .  P7 .~GJ     
+   .:...  ^#B#57!7!?#.     .7PGJP#:               ^J 7J        Y^.~~G5J?. ^5    
+           ?G7!!777!JB::!YGGY7!!!GG7^            :!^BB         G&?  .Y&?:?PB    
+            ^BY!!!!!!?BGYJ7!!!!!!!G5?J?7!!~:  ..??!BB5P.      PP75:.YJ?##Y75G~  
+              5G7!!77!!7!!7!!!77!!?G5GPG^::~P5~JP^.~G~?G!    P5!!7JP@B? .5BP#Y  
+               ^G57!!!!!!!!7JGB?7YJJ5JJB~:~7P&?PP!^?P?!!YP!!GY!!!!!7JGP   .^.   
+                 ~5PYJJJYY5J^PB!PB5BBP7?55BBBP!GGG55?B!7!7PP7!777!!YP~          
+                   .:~!!~:   5P!7?JY5PP7!77!?YB&J77!PP!7!!!!!7!!75G7            
+                             GY!!!!!!!!77!!7!!?GY!!!#P?!!!!!!!?PG?              
+                             GJ!777777777777!GBGJ~~?P:J5YJJY5PY~                
+                             B7!777777777777!JY#7!~#^   .^^:.                   
+                            .&7!777777777777PGYG!!JB                            
+                            .&?7!!!!!77777!7GPB?!!#~                            
+                             :!YG5J?7!!!!!!!!JP775B                             
+                                #5PGGGPPPPPPP##Y?!.                             
+                                B7!!77?YJ?JJ?G5                                 
+                                B7!!!7#&J!!!JG                                  
+                                B7!!!7&#7!!?B.                                  
+                                B7!!!Y#G!!!B^                                   
+                               .#J?77GGP!7GJ                                    
+                            :JB@@@@@@BB@@@@@BJ^                                 
+                         :G&@@@&#B&#G:~G##B&@@@@B7                              
+""")
+input()
+os.system('cls||clear')
+
+print("""
+                                             .~:..                              
+                                              YB5JGPY.                          
+                                :~J5GB###&&&&#B#B5YG&@^                         
+                            .7B@@@@&BBGGB##&@@@@&##@@&:                         
+                           :@@&&@@@@@@&&#&&@@@@@@@&#?                           ============================================
+                           ?@@BP#&J~77?5B&&&&P^:!?PJ                         /                                                 
+                           .@@&B#@!    GGGGG#J  :JG&.                       /       Round 1: Pick your Category: 
                             G@@@@#      .~^.   ~ :.~G:                     /                                                        
-            .^:.            P!:~BY      :#~    !?#^..7J:                 <<     Let's get this show on the road!          
-           .Y. !~          :G  !.     .   .:7^.  ...:7:7Y    .:^:.         \     
-           .Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G ^GG#GBGG~        \         
+            .^:.            P!:~BY      :#~    !?#^..7J:                 <<       Movies / TV / Music / Games / Sports          
+           .Y. !~          :G  !.     .   .:7^.  ...:7:7Y    .:^:.         \     Answer all correctly for a total of $200k!
+           .Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G ^GG#GBGG~        \           type none to Exit Game
          ..?!  !^            :@B.   .5:::::. .:^~^~^:    &^&BGG5G5GB~        \\
      :~^!:^P    :J            #B     7&P7^:......:7     ^G^&BBG5BPBB7           =============================================
   .Y7~:!: .?~.  .&J           ~B      J@&&&#B??Y^:.     G~ ?#&G#&#G#5!!?.       
@@ -100,11 +155,25 @@ print(f"""
                          :G&@@@&#B&#G:~G##B&@@@@B7                              
 """)
 
-print(f"Welcome {your_name}! Let's get this show on the road! ")
+user_decision = input("What category are we starting with today?: ")
 
+from game_questions import gametime, questions
+from movie_questions import movietime, questions
 
-input("")
-
-
+if user_decision.lower() == "games":
+    gametime(questions[1:5])
+if user_decision.lower() == "movies":
+    movietime(questions[1:5])
+else:
+    exit()
+    # if (user_decision.lower() == "None"):
+    #     continue
+    # if (user_cat.lower() == "Movies"):
+    # if (user_cat.lower() == "Movies"):
+    # if (user_cat.lower() == "Movies"):
+    # if (user_cat.lower() == "Movies"):
+        
 
 print(f"Thanks for playing, {your_name}!")
+
+

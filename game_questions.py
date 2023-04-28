@@ -34,7 +34,7 @@ questions = [
 ]
 random.shuffle(question_prompts)
 random.shuffle(questions)
-def run_test(questions):
+def gametime(questions):
     for question in questions:
         answer = input(question.prompt)
         if answer == question.answer:
@@ -45,7 +45,7 @@ def run_test(questions):
             print("Unfortunately that is incorrect. Game Over")
             input()
             exit()
-run_test(questions[1:5])
+gametime(questions[1:5])
 
 
 print("""
