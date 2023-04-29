@@ -34,6 +34,7 @@ questions = [
 ]
 random.shuffle(question_prompts)
 random.shuffle(questions)
+
 def movietime(questions):
     for question in questions:
         answer = input(question.prompt)

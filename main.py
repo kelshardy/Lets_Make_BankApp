@@ -1,7 +1,10 @@
 import os
 import sys, time 
 
-
+class Question:
+    def __init__(self, prompt, answer):
+        self.prompt = prompt
+        self.answer = answer
 
 def print_slow(str):
     for letter in str:
@@ -161,20 +164,21 @@ user_decision = input("What category are we starting with today?: ")
 # import movie_questions
 from movie_questions import movietime, questions
 from game_questions import gametime, questions
+from tv_questions import tvtime, questions
 
 while user_decision != "none":
     if (user_decision.lower() == "games"):
-        gametime(questions[1:5])
+        gametime(questions[0:5])
     if (user_decision.lower() == "movies"):
-        movietime(questions[1:5])
+        movietime(questions[0:5])
+    if (user_decision.lower() == "tv"):
+        tvtime(questions[0:5])
     else:
         exit()
     # if (user_decision.lower() == "None"):
     #     continue
-    # if (user_cat.lower() == "Movies"):
-    # if (user_cat.lower() == "Movies"):
-    # if (user_cat.lower() == "Movies"):
-    # if (user_cat.lower() == "Movies"):
+    
+ 
         
 
 print(f"Thanks for playing, {your_name}!")

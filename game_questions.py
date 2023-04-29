@@ -6,7 +6,11 @@ class Question:
         self.prompt = prompt
         self.answer = answer
 
-question_prompts = [
+
+
+def gametime():
+
+    question_prompts = [
     "What is the name of the player character in Uncharted?\n(a) Victor Sullivan\n(b) Nathan Drake\n(c) Max Payne\n(d) Big Boss",
     "What is Joel's surname in The Last Of Us?\n(a) Smith\n(b) Harrison\n(c) Miller\n(d) Garrett",
     "Who does Atreus turn out to be in God Of War?\n(a) Loki\n(b) Kratos\n(c) Zeus\n(d) Thor",
@@ -20,7 +24,7 @@ question_prompts = [
 ]
 
 
-questions = [
+    questions = [
     Question(question_prompts[0], "b"),
     Question(question_prompts[1], "c"),
     Question(question_prompts[2], "a"),
@@ -32,9 +36,9 @@ questions = [
     Question(question_prompts[8], "c"),
     Question(question_prompts[9], "a")
 ]
-random.shuffle(question_prompts)
-random.shuffle(questions)
-def gametime(questions):
+    random.shuffle(question_prompts)
+    random.shuffle(questions)
+
     for question in questions:
         answer = input(question.prompt)
         if answer == question.answer:
@@ -45,7 +49,7 @@ def gametime(questions):
             print("Unfortunately that is incorrect. Game Over")
             input()
             exit()
-gametime(questions[1:5])
+gametime()
 
 
 print("""
