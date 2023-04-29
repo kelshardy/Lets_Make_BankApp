@@ -80,7 +80,7 @@ print(f"""
                             .7B@@@@&BBGGB##&@@@@&##@@&:                         
                            :@@&&@@@@@@&&#&&@@@@@@@&#?                           ============================================
                            ?@@BP#&J~77?5B&&&&P^:!?PJ                         /                                                 
-                           .@@&B#@!    GGGGG#J  :JG&.                       /             G-Day, {your_name}! 
+                           .@@&B#@!    GGGGG#J  :JG&.                       /              G-Day, {your_name}! 
                             G@@@@#      .~^.   ~ :.~G:                     /      For each round, we'll pick a different                                                  
             .^:.            P!:~BY      :#~    !?#^..7J:                 <<      category. Answer correctly and you're still        
            .Y. !~          :G  !.     .   .:7^.  ...:7:7Y    .:^:.         \     in the game. If you're wrong though, 
@@ -122,11 +122,11 @@ print("""
                             .7B@@@@&BBGGB##&@@@@&##@@&:                         
                            :@@&&@@@@@@&&#&&@@@@@@@&#?                           ============================================
                            ?@@BP#&J~77?5B&&&&P^:!?PJ                         /                                                 
-                           .@@&B#@!    GGGGG#J  :JG&.                       /       Round 1: Pick your Category: 
-                            G@@@@#      .~^.   ~ :.~G:                     /                                                        
-            .^:.            P!:~BY      :#~    !?#^..7J:                 <<       Movies / TV / Music / Games / Sports          
-           .Y. !~          :G  !.     .   .:7^.  ...:7:7Y    .:^:.         \     Answer all correctly for a total of $200k!
-           .Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G ^GG#GBGG~        \           type none to Exit Game
+                           .@@&B#@!    GGGGG#J  :JG&.                       /          Round 1: Pick your Category: 
+                            G@@@@#      .~^.   ~ :.~G:                     /      Movies / TV / Music / Games / Sports / Books                                                  
+            .^:.            P!:~BY      :#~    !?#^..7J:                 <<          Answer all correct in each category     
+           .Y. !~          :G  !.     .   .:7^.  ...:7:7Y    .:^:.         \              for a total of $200k!
+           .Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G ^GG#GBGG~        \            type none to Exit Game
          ..?!  !^            :@B.   .5:::::. .:^~^~^:    &^&BGG5G5GB~        \\
      :~^!:^P    :J            #B     7&P7^:......:7     ^G^&BBG5BPBB7           =============================================
   .Y7~:!: .?~.  .&J           ~B      J@&&&#B??Y^:.     G~ ?#&G#&#G#5!!?.       
@@ -157,15 +157,18 @@ print("""
 
 user_decision = input("What category are we starting with today?: ")
 
-from game_questions import gametime, questions
+# import game_questions
+# import movie_questions
 from movie_questions import movietime, questions
+from game_questions import gametime, questions
 
-if user_decision.lower() == "games":
-    gametime(questions[1:5])
-if user_decision.lower() == "movies":
-    movietime(questions[1:5])
-else:
-    exit()
+while user_decision != "none":
+    if (user_decision.lower() == "games"):
+        gametime(questions[1:5])
+    if (user_decision.lower() == "movies"):
+        movietime(questions[1:5])
+    else:
+        exit()
     # if (user_decision.lower() == "None"):
     #     continue
     # if (user_cat.lower() == "Movies"):
