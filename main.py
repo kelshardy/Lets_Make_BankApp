@@ -6,6 +6,19 @@ class Question:
         self.prompt = prompt
         self.answer = answer
 
+def questiontime(questions):
+    for question in questions:
+        answer = input(question.prompt)
+        if answer == question.answer:
+            print("Correct! Next Round!")
+            input()
+            os.system('cls||clear')
+        else:
+            print("Unfortunately that is incorrect. Game Over")
+            input()
+            exit()
+questiontime(questions[1:5])
+
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
@@ -168,7 +181,7 @@ from tv_questions import tvtime, questions
 
 while user_decision != "none":
     if (user_decision.lower() == "games"):
-        gametime(questions[0:5])
+        questiontime(questions[0:5])
     if (user_decision.lower() == "movies"):
         movietime(questions[0:5])
     if (user_decision.lower() == "tv"):

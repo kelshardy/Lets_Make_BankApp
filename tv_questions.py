@@ -7,16 +7,16 @@ class Question:
         self.answer = answer
 
 question_prompts = [
-    "q\n(a) a\n(b) a\n(c) a\n(d) a",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a"
+    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
+    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
+    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
+    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
+    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
+    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
+    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
+    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
+    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
+    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: "
 ]
 
 
