@@ -6,11 +6,7 @@ class Question:
         self.prompt = prompt
         self.answer = answer
 
-
-
-def gametime():
-
-    question_prompts = [
+question_prompts = [
     "What is the name of the player character in Uncharted?\n(a) Victor Sullivan\n(b) Nathan Drake\n(c) Max Payne\n(d) Big Boss\nAnswer: ",
     "What is Joel's surname in The Last Of Us?\n(a) Smith\n(b) Harrison\n(c) Miller\n(d) Garrett\nAnswer: ",
     "Who does Atreus turn out to be in God Of War?\n(a) Loki\n(b) Kratos\n(c) Zeus\n(d) Thor\nAnswer: ",
@@ -23,8 +19,7 @@ def gametime():
     "The Umbrella Corporation is a fictitious pharmaceutical company in what game?\n(a) Resident Evil\n(b) Dino Crisis\n(c) Clock Tower\n(d) Project Zero\nAnswer: "
 ]
 
-
-    questions = [
+game_questions = [
     Question(question_prompts[0], "b"),
     Question(question_prompts[1], "c"),
     Question(question_prompts[2], "a"),
@@ -36,10 +31,11 @@ def gametime():
     Question(question_prompts[8], "c"),
     Question(question_prompts[9], "a")
 ]
-    random.shuffle(question_prompts)
-    random.shuffle(questions)
+random.shuffle(question_prompts)
+random.shuffle(game_questions)
 
-    for question in questions:
+def gametime(questions):
+ for question in questions:
         answer = input(question.prompt)
         if answer == question.answer:
             print("Correct! Next Round!")
@@ -49,7 +45,7 @@ def gametime():
             print("Unfortunately that is incorrect. Game Over")
             input()
             exit()
-gametime()
+gametime(game_questions)
 
 
 print("""

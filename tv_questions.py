@@ -20,7 +20,7 @@ question_prompts = [
 ]
 
 
-questions = [
+tv_questions = [
     Question(question_prompts[0], "a"),
     Question(question_prompts[1], "a"),
     Question(question_prompts[2], "a"),
@@ -33,7 +33,7 @@ questions = [
     Question(question_prompts[9], "a")
 ]
 random.shuffle(question_prompts)
-random.shuffle(questions)
+random.shuffle(tv_questions)
 
 def tvtime(questions):
     for question in questions:
@@ -46,7 +46,7 @@ def tvtime(questions):
             print("Unfortunately that is incorrect. Game Over")
             input()
             exit()
-tvtime(questions[1:5])
+tvtime(tv_questions)
 
 
 print("""

@@ -6,7 +6,7 @@ class Question:
         self.prompt = prompt
         self.answer = answer
 
-question_prompts = [
+m_question_prompts = [
     "What is Hermione Granger's middle name?\n(a) Jean\n(b) Luna\n(c) Emma\n(d) Rose\nAnswer: ",
     "Who is Frodo's best friend in The Lord Of the Rings Trilogy\n(a) Legolas\n(b) Bilbo Baggins\n(c) Gollum\n(d) Samwise Gamgee\nAnswer: ",
     "How many Oceans films have been released?\n(a) 3\n(b) 1\n(c) 4\n(d) 5\nAnswer: ",
@@ -19,21 +19,20 @@ question_prompts = [
     "Who played Cher in Clueless?\n(a) Lindsay Lohan\n(b) Alicia Silverstone\n(c) Rachel McAdams\n(d) Heather Graham\nAnswer: "
 ]
 
-
-questions = [
-    Question(question_prompts[0], "a"),
-    Question(question_prompts[1], "d"),
-    Question(question_prompts[2], "c"),
-    Question(question_prompts[3], "b"),
-    Question(question_prompts[4], "b"),
-    Question(question_prompts[5], "c"),
-    Question(question_prompts[6], "a"),
-    Question(question_prompts[7], "d"),
-    Question(question_prompts[8], "a"),
-    Question(question_prompts[9], "b")
+movie_questions = [
+    Question(m_question_prompts[0], "a"),
+    Question(m_question_prompts[1], "d"),
+    Question(m_question_prompts[2], "c"),
+    Question(m_question_prompts[3], "b"),
+    Question(m_question_prompts[4], "b"),
+    Question(m_question_prompts[5], "c"),
+    Question(m_question_prompts[6], "a"),
+    Question(m_question_prompts[7], "d"),
+    Question(m_question_prompts[8], "a"),
+    Question(m_question_prompts[9], "b")
 ]
-random.shuffle(question_prompts)
-random.shuffle(questions)
+random.shuffle(m_question_prompts)
+random.shuffle(movie_questions)
 
 def movietime(questions):
     for question in questions:
@@ -46,7 +45,7 @@ def movietime(questions):
             print("Unfortunately that is incorrect. Game Over")
             input()
             exit()
-movietime(questions[1:5])
+movietime(movie_questions)
 
 
 print("""

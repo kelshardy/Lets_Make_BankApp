@@ -1,23 +1,72 @@
 import os
+import random
 import sys, time 
-
+from questiontime import questiontime
+# from movie_questions import movie_questions
+# from game_questions import game_questions
+# from tv_questions import tv_questions  
 class Question:
     def __init__(self, prompt, answer):
         self.prompt = prompt
         self.answer = answer
 
-def questiontime(questions):
-    for question in questions:
-        answer = input(question.prompt)
-        if answer == question.answer:
-            print("Correct! Next Round!")
-            input()
-            os.system('cls||clear')
-        else:
-            print("Unfortunately that is incorrect. Game Over")
-            input()
-            exit()
-questiontime(questions[1:5])
+question_prompts = [
+    "What is Hermione Granger's middle name?\n(a) Jean\n(b) Luna\n(c) Emma\n(d) Rose\nAnswer: ",
+    "Who is Frodo's best friend in The Lord Of the Rings Trilogy\n(a) Legolas\n(b) Bilbo Baggins\n(c) Gollum\n(d) Samwise Gamgee\nAnswer: ",
+    "How many Oceans films have been released?\n(a) 3\n(b) 1\n(c) 4\n(d) 5\nAnswer: ",
+    "Who does Keanu Reeves play in the Matrix series?\n(a) Morpheus\n(b) Neo\n(c) Trinity\n(d) Agent Smith\nAnswer: ",
+    "What movie has the longest run-time in Hollywood?\n(a) Gone With The Wind\n(b) Cleopatra\n(c) Titanic\n(d) Avatar: The Way Of The Water\nAnswer: ",
+    "What name is given to the human character in Monsters Inc.?\n(a) Sully\n(b) Celia\n(c) Boo\n(d) 23-19\nAnswer: ",
+    "What is the Tin Man missing in The Wizard Of Oz\n(a) Heart\n(b) Courage\n(c) Brains\n(d) Home\nAnswer: ",
+    "One what day does the first Die Hard movie take place?\n(a) Thanksgiving\n(b) Good Friday\n(c) Halloween\n(d) Christmas Eve\nAnswer: ",
+    "What was the name of Marty's band in Back To The Future?\n(a) The Pinheads\n(b) The Blockheads\n(c) The Eggheads\n(d) The Coneheads\nAnswer: ",
+    "Who played Cher in Clueless?\n(a) Lindsay Lohan\n(b) Alicia Silverstone\n(c) Rachel McAdams\n(d) Heather Graham\nAnswer: "
+]
+
+movie_questions = [
+    Question(question_prompts[0], "a"),
+    Question(question_prompts[1], "d"),
+    Question(question_prompts[2], "c"),
+    Question(question_prompts[3], "b"),
+    Question(question_prompts[4], "b"),
+    Question(question_prompts[5], "c"),
+    Question(question_prompts[6], "a"),
+    Question(question_prompts[7], "d"),
+    Question(question_prompts[8], "a"),
+    Question(question_prompts[9], "b")
+]
+# random.shuffle(question_prompts)
+# random.shuffle(movie_questions)
+
+question_prompts = [
+    "What is the name of the player character in Uncharted?\n(a) Victor Sullivan\n(b) Nathan Drake\n(c) Max Payne\n(d) Big Boss\nAnswer: ",
+    "What is Joel's surname in The Last Of Us?\n(a) Smith\n(b) Harrison\n(c) Miller\n(d) Garrett\nAnswer: ",
+    "Who does Atreus turn out to be in God Of War?\n(a) Loki\n(b) Kratos\n(c) Zeus\n(d) Thor\nAnswer: ",
+    "Which company created Super Mario?\n(a) Sony\n(b) Nintendo\n(c) Microsoft\n(d) Atari\nAnswer: ",
+    "What colour is Luigi's hat in Super Mario?\n(a) Yellow\n(b) Red\n(c) Blue\n(d) Green\nAnswer: ",
+    "What is the alias of the main antogonist in Bioshock?\n(a) Andrew Ryan\n(b) ADAM\n(c) Atlas\n(d) Frank Fontaine\nAnswer: ",
+    "What is the name of the jungle that naked snake is dropped into at the beginning on of Metal Gear Solid 3: Snake Eater\n(a) Semipalatinsk\n(b) Stalingrad\n(c) Ural Mountains\n(d) Tselinoyarsk\nAnswer: ",
+    "Which character doesn't swear in The Last Of Us Part 1?\n(a) Tommy\n(b) Ellie\n(c) Joel\n(d) David\nAnswer: ",
+    "According to Metacritic, what is the highest rated game of all-time?\n(a) Tony Hawk Pro Skater 2\n(b) Grand Theft Auto V\n(c) The Legend Of Zelda: Ocarina Of Time\n(d) Elden Ring\nAnswer: ",
+    "The Umbrella Corporation is a fictitious pharmaceutical company in what game?\n(a) Resident Evil\n(b) Dino Crisis\n(c) Clock Tower\n(d) Project Zero\nAnswer: "
+]
+
+game_questions = [
+    Question(question_prompts[0], "b"),
+    Question(question_prompts[1], "c"),
+    Question(question_prompts[2], "a"),
+    Question(question_prompts[3], "b"),
+    Question(question_prompts[4], "d"),
+    Question(question_prompts[5], "c"),
+    Question(question_prompts[6], "d"),
+    Question(question_prompts[7], "d"),
+    Question(question_prompts[8], "c"),
+    Question(question_prompts[9], "a")
+]
+# random.shuffle(question_prompts)
+# random.shuffle(game_questions)
+
+
 
 def print_slow(str):
     for letter in str:
@@ -97,7 +146,7 @@ print(f"""
                            :@@&&@@@@@@&&#&&@@@@@@@&#?                           ============================================
                            ?@@BP#&J~77?5B&&&&P^:!?PJ                         /                                                 
                            .@@&B#@!    GGGGG#J  :JG&.                       /              G-Day, {your_name}! 
-                            G@@@@#      .~^.   ~ :.~G:                     /      For each round, we'll pick a different                                                  
+                            G@@@@#      .~^.   ~ :.~G:                     /      For each round, we'll pick a different
             .^:.            P!:~BY      :#~    !?#^..7J:                 <<      category. Answer correctly and you're still        
            .Y. !~          :G  !.     .   .:7^.  ...:7:7Y    .:^:.         \     in the game. If you're wrong though, 
            .Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G ^GG#GBGG~        \         it's Game Over... here we go!
@@ -128,7 +177,7 @@ print(f"""
                             :JB@@@@@@BB@@@@@BJ^                                 
                          :G&@@@&#B&#G:~G##B&@@@@B7                              
 """)
-input()
+input("Press Enter to continue")
 os.system('cls||clear')
 
 print("""
@@ -139,7 +188,7 @@ print("""
                            :@@&&@@@@@@&&#&&@@@@@@@&#?                           ============================================
                            ?@@BP#&J~77?5B&&&&P^:!?PJ                         /                                                 
                            .@@&B#@!    GGGGG#J  :JG&.                       /          Round 1: Pick your Category: 
-                            G@@@@#      .~^.   ~ :.~G:                     /      Movies / TV / Music / Games / Sports / Books                                                  
+                            G@@@@#      .~^.   ~ :.~G:                     /      Movies / TV / Music / Games / Sports / Books
             .^:.            P!:~BY      :#~    !?#^..7J:                 <<          Answer all correct in each category     
            .Y. !~          :G  !.     .   .:7^.  ...:7:7Y    .:^:.         \              for a total of $200k!
            .Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G ^GG#GBGG~        \            type none to Exit Game
@@ -173,27 +222,24 @@ print("""
 
 user_decision = input("What category are we starting with today?: ")
 
-# import game_questions
-# import movie_questions
-from movie_questions import movietime, questions
-from game_questions import gametime, questions
-from tv_questions import tvtime, questions
-
 while user_decision != "none":
     if (user_decision.lower() == "games"):
-        questiontime(questions[0:5])
+        os.system('cls||clear')
+        questiontime(game_questions[0:5])
+      
+        pass
     if (user_decision.lower() == "movies"):
-        movietime(questions[0:5])
-    if (user_decision.lower() == "tv"):
-        tvtime(questions[0:5])
+        os.system('cls||clear')
+        questiontime(movie_questions[0:5])
+        
+        continue
+    # if (user_decision.lower() == "tv"):
+    #     questiontime(tv_questions[0:5])
     else:
         exit()
     # if (user_decision.lower() == "None"):
     #     continue
     
- 
-        
-
 print(f"Thanks for playing, {your_name}!")
 
-
+      
