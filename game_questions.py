@@ -38,14 +38,14 @@ def gametime(questions):
  for question in questions:
         answer = input(question.prompt)
         if answer == question.answer:
-            print("Correct! Next Round!")
+            print("Correct! Next Question")
             input()
-            os.system('cls||clear')
+            os.system('clear')
         else:
             print("Unfortunately that is incorrect. Game Over")
             input()
             exit()
-gametime(game_questions)
+gametime(game_questions[0:5])
 
 
 print("""

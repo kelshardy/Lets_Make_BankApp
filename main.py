@@ -3,10 +3,7 @@ import random
 import sys
 import time
 from colored import fg, bg, attr
-# from questiontime import questiontime
-# from movie_questions import movie_questions
-# from game_questions import game_questions
-# from tv_questions import tv_questions
+# from game_questions import *
 
 class Question:
     def __init__(self, prompt, answer):
@@ -18,14 +15,13 @@ def questiontime(questions):
     for question in questions:
         answer = input(question.prompt)
         if answer == question.answer:
-            print("Correct! Next Round!")
+            print(f"{fg('green')}Correct! Next Question{attr('reset')}")
             input()
-            os.system('cls||clear')
+            os.system('clear')
         else:
-            print("Unfortunately that is incorrect.")
+            print_slow(f"{fg('red')}Unfortunately that is incorrect.\nYou will be making no bank today...{attr('reset')}")
             input()
-            return
-            
+            exit(f"Thanks for playing, {your_name}!")
 
 question_prompts = [
     "What is Hermione Granger's middle name?\n(a) Jean\n(b) Luna\n(c) Emma\n(d) Rose\nAnswer: ",
@@ -83,24 +79,30 @@ def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
-        time.sleep(0.1)
+        time.sleep(0.08)
 
-print(f"""{fg('gold_3b')}
-888              888    d8b              888b     d888          888                    888888b.                     888      
-888              888    88P              8888b   d8888          888                    888  "88b                    888      
-888              888    8P               88888b.d88888          888                    888  .88P                    888      
-{fg('gold_1')}888      .d88b.  888888 "  .d8888b       888Y88888P888  8888b.  888  888  .d88b.       8888888K.   8888b.  88888b.  888  888 
-888     d8P  Y8b 888       88K           888 Y888P 888     "88b 888 .88P d8P  Y8b      888  "Y88b     "88b 888 "88b 888 .88P 
-888     88888888 888       "Y8888b.      888  Y8P  888 .d888888 888888K  88888888      888    888 .d888888 888  888 888888K  
-{fg('yellow')}888     Y8b.     Y88b.          X88      888   "   888 888  888 888 "88b Y8b.          888   d88P 888  888 888  888 888 "88b 
-88888888 "Y8888   "Y888     88888P'      888       888 "Y888888 888  888  "Y8888       8888888P"  "Y888888 888  888 888  888 
-                                                                                                                             
-                                                                                                                             
-                                                                                                                             
-{attr('reset')}""")
+def press_start():
+  print(f"""{fg('gold_3b')}
+  888              888    d8b              888b     d888          888                    888888b.                     888      
+  888              888    88P              8888b   d8888          888                    888  "88b                    888      
+  888              888    8P               88888b.d88888          888                    888  .88P                    888      
+  {fg('gold_1')}888      .d88b.  888888 "  .d8888b       888Y88888P888  8888b.  888  888  .d88b.       8888888K.   8888b.  88888b.  888  888 
+  888     d8P  Y8b 888       88K           888 Y888P 888     "88b 888 .88P d8P  Y8b      888  "Y88b     "88b 888 "88b 888 .88P 
+  888     88888888 888       "Y8888b.      888  Y8P  888 .d888888 888888K  88888888      888    888 .d888888 888  888 888888K  
+  {fg('yellow')}888     Y8b.     Y88b.          X88      888   "   888 888  888 888 "88b Y8b.          888   d88P 888  888 888  888 888 "88b 
+  88888888 "Y8888   "Y888     88888P'      888       888 "Y888888 888  888  "Y8888       8888888P"  "Y888888 888  888 888  888 
+                                                                                                                              
+                                                                                                                              
+                                                                                                                              
+  {attr('reset')}""")
+  print_slow("Press Enter to Start...")
+  input()
+press_start()
 
-print_slow("Press Enter to Start...")
-input()
+# if __name__ == "__main__":
+#   press_start()
+# else:
+#   pass
 
 os.system('clear')
 
@@ -232,13 +234,19 @@ print(f"""{fg('dark_orange_3a')}
 
 def category_menu():
   while True:
-    user_decision = input("What category are we starting with today?: ")
+    user_decision = input("What category would you like to play?: ")
     if (user_decision.lower() == "games"):
       os.system('clear')
-      questiontime(game_questions)
+      game_questions.gametime()
+      # questiontime(game_questions)
     if (user_decision.lower() == "movies"):
       os.system('clear')
-      questiontime(movie_questions)
+      questiontime(movie_questions[0:5])
+      print(f"""{fg('yellow')}
+.-------------------------------------------------.
+| Congratulations! You've reached the next level! |
+'-------------------------------------------------'
+{attr('reset')}""")
     if (user_decision.lower() == "exit"):
       break
     else:
