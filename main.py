@@ -1,15 +1,31 @@
 import os
 import random
-import sys, time 
+import sys
+import time
 from colored import fg, bg, attr
-from questiontime import questiontime
+# from questiontime import questiontime
 # from movie_questions import movie_questions
 # from game_questions import game_questions
-# from tv_questions import tv_questions  
+# from tv_questions import tv_questions
+
 class Question:
     def __init__(self, prompt, answer):
         self.prompt = prompt
         self.answer = answer
+
+def questiontime(questions):
+    random.shuffle(questions)
+    for question in questions:
+        answer = input(question.prompt)
+        if answer == question.answer:
+            print("Correct! Next Round!")
+            input()
+            os.system('cls||clear')
+        else:
+            print("Unfortunately that is incorrect.")
+            input()
+            return
+            
 
 question_prompts = [
     "What is Hermione Granger's middle name?\n(a) Jean\n(b) Luna\n(c) Emma\n(d) Rose\nAnswer: ",
@@ -36,8 +52,6 @@ movie_questions = [
     Question(question_prompts[8], "a"),
     Question(question_prompts[9], "b")
 ]
-# random.shuffle(question_prompts)
-# random.shuffle(movie_questions)
 
 question_prompts = [
     "What is the name of the player character in Uncharted?\n(a) Victor Sullivan\n(b) Nathan Drake\n(c) Max Payne\n(d) Big Boss\nAnswer: ",
@@ -64,10 +78,6 @@ game_questions = [
     Question(question_prompts[8], "c"),
     Question(question_prompts[9], "a")
 ]
-# random.shuffle(question_prompts)
-# random.shuffle(game_questions)
-
-
 
 def print_slow(str):
     for letter in str:
@@ -92,7 +102,7 @@ print(f"""{fg('gold_3b')}
 print_slow("Press Enter to Start...")
 input()
 
-os.system('cls||clear')
+os.system('clear')
 
 print(f"""{fg('dark_orange_3a')}
                                              .~:..                              
@@ -137,7 +147,7 @@ print(f"""{fg('dark_orange_3a')}
 print_slow("Enter name: ")
 your_name = input("")
 
-os.system('cls||clear')
+os.system('clear')
 print(f"""{fg('dark_orange_3a')}
                                              .~:..                              
                                               YB5JGPY.                          
@@ -179,7 +189,7 @@ print(f"""{fg('dark_orange_3a')}
 {attr('reset')}""")
 
 input("Press Enter to continue")
-os.system('cls||clear')
+os.system('clear')
 print(f"""{fg('dark_orange_3a')}
                                              .~:..                              
                                               YB5JGPY.                          
@@ -191,7 +201,7 @@ print(f"""{fg('dark_orange_3a')}
                             {fg('dark_orange_3a')}G@@@@#      .~^.   ~ :.~G:                     {attr('reset')}/      Movies / TV / Music / Games / Sports / Books
             {fg('light_pink_1')}.^:.            P!:~BY      :#~    !?#^..7J:{attr('reset')}                 <<          Answer all correct in each category         
            {fg('light_pink_1')}.Y. !~          :G  !.     .   .:7^.  ...:7:7Y    {fg('234')}.:^:.{attr('reset')}         \             for a total of $200k! 
-           {fg('light_pink_1')}.Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G {fg('234')}^GG#GBGG~{attr('reset')}        \            type none to Exit Game 
+           {fg('light_pink_1')}.Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G {fg('234')}^GG#GBGG~{attr('reset')}        \            type Exit to Quit Game 
          {fg('light_pink_1')}..?!  !^            :@B.   .5:::::. .:^~^~^:    &{fg('234')}^&BGG5G5GB~{attr('reset')}        \\
      {fg('light_pink_1')}:~^!:^P    :J            #B     7&P7^:......:7     ^G{fg('234')}^&BBG5BPBB7{attr('reset')}           =============================================
   {fg('light_pink_1')}.Y7~:!: .?~.  {fg('23')}.&J           {fg('light_pink_1')}~B      J@&&&#B??Y^:.     G~ {fg('234')}?#&G#&#G#5{fg('light_pink_1')}!!?.{attr('reset')}       
@@ -219,66 +229,21 @@ print(f"""{fg('dark_orange_3a')}
                             {fg('232')}:JB@@@@@@BB@@@@@BJ^                                 
                          :G&@@@&#B&#G:~G##B&@@@@B7                              
 {attr('reset')}""")
-# print("""
-#                                              .~:..                              
-#                                               YB5JGPY.                          
-#                                 :~J5GB###&&&&#B#B5YG&@^                         
-#                             .7B@@@@&BBGGB##&@@@@&##@@&:                         
-#                            :@@&&@@@@@@&&#&&@@@@@@@&#?                           ============================================
-#                            ?@@BP#&J~77?5B&&&&P^:!?PJ                         /                                                 
-#                            .@@&B#@!    GGGGG#J  :JG&.                       /          Round 1: Pick your Category: 
-#                             G@@@@#      .~^.   ~ :.~G:                     /      Movies / TV / Music / Games / Sports / Books
-#             .^:.            P!:~BY      :#~    !?#^..7J:                 <<          Answer all correct in each category     
-#            .Y. !~          :G  !.     .   .:7^.  ...:7:7Y    .:^:.         \              for a total of $200k!
-#            .Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G ^GG#GBGG~        \            type none to Exit Game
-#          ..?!  !^            :@B.   .5:::::. .:^~^~^:    &^&BGG5G5GB~        \\
-#      :~^!:^P    :J            #B     7&P7^:......:7     ^G^&BBG5BPBB7           =============================================
-#   .Y7~:!: .?~.  .&J           ~B      J@&&&#B??Y^:.     G~ ?#&G#&#G#5!!?.       
-#   G~.:.~ ..     P5G7           P.      ^GPYYPJ757. :   75    :?#?!Y5.^7?7!      
-#   Y5:::::^:JB&~?J!!#^         .Y#        .^~~~~^: .5  !5      !~ .  P7 .~GJ     
-#    .:...  ^#B#57!7!?#.     .7PGJP#:               ^J 7J        Y^.~~G5J?. ^5    
-#            ?G7!!777!JB::!YGGY7!!!GG7^            :!^BB         G&?  .Y&?:?PB    
-#             ^BY!!!!!!?BGYJ7!!!!!!!G5?J?7!!~:  ..??!BB5P.      PP75:.YJ?##Y75G~  
-#               5G7!!77!!7!!7!!!77!!?G5GPG^::~P5~JP^.~G~?G!    P5!!7JP@B? .5BP#Y  
-#                ^G57!!!!!!!!7JGB?7YJJ5JJB~:~7P&?PP!^?P?!!YP!!GY!!!!!7JGP   .^.   
-#                  ~5PYJJJYY5J^PB!PB5BBP7?55BBBP!GGG55?B!7!7PP7!777!!YP~          
-#                    .:~!!~:   5P!7?JY5PP7!77!?YB&J77!PP!7!!!!!7!!75G7            
-#                              GY!!!!!!!!77!!7!!?GY!!!#P?!!!!!!!?PG?              
-#                              GJ!777777777777!GBGJ~~?P:J5YJJY5PY~                
-#                              B7!777777777777!JY#7!~#^   .^^:.                   
-#                             .&7!777777777777PGYG!!JB                            
-#                             .&?7!!!!!77777!7GPB?!!#~                            
-#                              :!YG5J?7!!!!!!!!JP775B                             
-#                                 #5PGGGPPPPPPP##Y?!.                             
-#                                 B7!!77?YJ?JJ?G5                                 
-#                                 B7!!!7#&J!!!JG                                  
-#                                 B7!!!7&#7!!?B.                                  
-#                                 B7!!!Y#G!!!B^                                   
-#                                .#J?77GGP!7GJ                                    
-#                             :JB@@@@@@BB@@@@@BJ^                                 
-#                          :G&@@@&#B&#G:~G##B&@@@@B7                              
-# """)
 
-user_decision = input("What category are we starting with today?: ")
-
-while user_decision != "none":
+def category_menu():
+  while True:
+    user_decision = input("What category are we starting with today?: ")
     if (user_decision.lower() == "games"):
-        os.system('cls||clear')
-        questiontime(game_questions[0:5])
-      
-        pass
+      os.system('clear')
+      questiontime(game_questions)
     if (user_decision.lower() == "movies"):
-        os.system('cls||clear')
-        questiontime(movie_questions[0:5])
-        
-        continue
-    # if (user_decision.lower() == "tv"):
-    #     questiontime(tv_questions[0:5])
+      os.system('clear')
+      questiontime(movie_questions)
+    if (user_decision.lower() == "exit"):
+      break
     else:
-        exit()
-    # if (user_decision.lower() == "None"):
-    #     continue
-    
-print(f"Thanks for playing, {your_name}!")
+      print("Please enter a category or type Exit")
+      continue
+category_menu()
 
-      
+print(f"Thanks for playing, {your_name}!")

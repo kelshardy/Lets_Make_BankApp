@@ -9,6 +9,6 @@ def questiontime(questions):
             input()
             os.system('cls||clear')
         else:
-            print("Unfortunately that is incorrect. Game Over")
+            print("Unfortunately that is incorrect.")
             input()
             exit()
