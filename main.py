@@ -3,25 +3,35 @@ import random
 import sys
 import time
 from colored import fg, bg, attr
-# from game_questions import *
+
 
 class Question:
     def __init__(self, prompt, answer):
         self.prompt = prompt
         self.answer = answer
 
-def questiontime(questions):
+
+def ask_questions(questions):
     random.shuffle(questions)
-    for question in questions:
-        answer = input(question.prompt)
-        if answer == question.answer:
-            print(f"{fg('green')}Correct! Next Question{attr('reset')}")
-            input()
-            os.system('clear')
-        else:
-            print_slow(f"{fg('red')}Unfortunately that is incorrect.\nYou will be making no bank today...{attr('reset')}")
-            input()
-            exit(f"Thanks for playing, {your_name}!")
+    for question in questions[0:5]:
+
+        answer = ""
+        while answer.lower() not in ["a", "b", "c", "d"]:
+            answer = input(question.prompt)
+            if answer == question.answer:
+                print(f"{fg('green')}Correct! Next Question{attr('reset')}")
+                input()
+                os.system('clear')
+            elif answer != question.answer and answer.lower() not in ["a", "b", "c", "d"]:
+                os.system('clear')
+                print(
+                    f"{fg('214')}Oi mate, that's not a real answer!{attr('reset')}")
+            else:
+                print_slow(
+                    f"{fg('red')}Unfortunately that is incorrect.\nYou will be making no bank today...{attr('reset')}")
+                input()
+                exit(f"Thanks for playing, {your_name}!")
+
 
 question_prompts = [
     "What is Hermione Granger's middle name?\n(a) Jean\n(b) Luna\n(c) Emma\n(d) Rose\nAnswer: ",
@@ -75,14 +85,25 @@ game_questions = [
     Question(question_prompts[9], "a")
 ]
 
+
+class Helper:
+    def congrats():
+        print(f"""{fg('yellow')}
+.-------------------------------------------------.
+| {bg('91')}Congratulations! You've reached the next level!{attr('reset')}{fg('yellow')} |
+'-------------------------------------------------'
+{attr('reset')}""")
+
+
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
         time.sleep(0.08)
 
+
 def press_start():
-  print(f"""{fg('gold_3b')}
+    print(f"""{fg('gold_3b')}
   888              888    d8b              888b     d888          888                    888888b.                     888      
   888              888    88P              8888b   d8888          888                    888  "88b                    888      
   888              888    8P               88888b.d88888          888                    888  .88P                    888      
@@ -95,14 +116,10 @@ def press_start():
                                                                                                                               
                                                                                                                               
   {attr('reset')}""")
-  print_slow("Press Enter to Start...")
-  input()
-press_start()
+    print_slow("Press Enter to Start...")
+    input()
 
-# if __name__ == "__main__":
-#   press_start()
-# else:
-#   pass
+press_start()
 
 os.system('clear')
 
@@ -232,26 +249,38 @@ print(f"""{fg('dark_orange_3a')}
                          :G&@@@&#B&#G:~G##B&@@@@B7                              
 {attr('reset')}""")
 
+
 def category_menu():
-  while True:
-    user_decision = input("What category would you like to play?: ")
-    if (user_decision.lower() == "games"):
-      os.system('clear')
-      game_questions.gametime()
-      # questiontime(game_questions)
-    if (user_decision.lower() == "movies"):
-      os.system('clear')
-      questiontime(movie_questions[0:5])
-      print(f"""{fg('yellow')}
-.-------------------------------------------------.
-| Congratulations! You've reached the next level! |
-'-------------------------------------------------'
-{attr('reset')}""")
-    if (user_decision.lower() == "exit"):
-      break
-    else:
-      print("Please enter a category or type Exit")
-      continue
+    correct_categories = 0
+
+    while True:
+        if correct_categories >= 3:
+            print("You are the bread winner!")
+            return
+
+        user_decision = input("What category would you like to play?: ")
+
+        if (user_decision.lower() == "games"):
+            os.system('clear')
+            ask_questions(game_questions)
+            Helper.congrats()
+            correct_categories += 1
+            continue
+
+        if (user_decision.lower() == "movies"):
+            os.system('clear')
+            ask_questions(movie_questions)
+            Helper.congrats()
+            correct_categories += 1
+            continue
+
+        if (user_decision.lower() == "exit"):
+            return
+        else:
+            print("Error: Category doesn't exist.")
+            print("Please enter a Category or type Exit")
+            continue
+
 category_menu()
 
 print(f"Thanks for playing, {your_name}!")
