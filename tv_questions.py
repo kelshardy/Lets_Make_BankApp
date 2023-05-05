@@ -13,10 +13,10 @@ question_prompts = [
     "What is the name of the hospital in Scrubs\n(a) County General\n(b) Seattle Grace\n(c) San Jose St. Bonaventure\n(d) Sacred Heart\nAnswer: ",
     "What is the family's last name in Arrested Development?\n(a) Sitwell\n(b) Bluth\n(c) Michael\n(d) Bateman\nAnswer: ",
     "What was the name of Captain Holt's dog in Brooklyn Nine-Nine?\n(a) Bruce\n(b) Arlo\n(c) Terry\n(d) Cheddar\nAnswer: ",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: ",
-    "q\n(a) a\n(b) a\n(c) a\n(d) a\nAnswer: "
+    "In the kids tv series, Bluey, who is Bluey's father?\n(a) Bandit\n(b) Chilli\n(c) Stripe\n(d) Bingo\nAnswer: ",
+    "What subject did Walter White teach in Breaking Bad?\n(a) Math\n(b) Physical Education\n(c) Chemistry\n(d) Biology\nAnswer: ",
+    "What is the name of the pet dog in The Simpsons\n(a) Spike\n(b) Snowball\n(c) Odie\n(d) Santa's Little Helper\nAnswer: ",
+    "What game do the boys of Stranger Things like to play?\n(a) Tag\n(b) Dungeons and Dragons\n(c) Yahtzee\n(d) Baldur's Gate\nAnswer: "
 ]
 
 
@@ -28,9 +28,9 @@ tv_questions = [
     Question(question_prompts[4], "b"),
     Question(question_prompts[5], "d"),
     Question(question_prompts[6], "a"),
-    Question(question_prompts[7], "a"),
-    Question(question_prompts[8], "a"),
-    Question(question_prompts[9], "a")
+    Question(question_prompts[7], "c"),
+    Question(question_prompts[8], "d"),
+    Question(question_prompts[9], "b")
 ]
 random.shuffle(question_prompts)
 random.shuffle(tv_questions)
