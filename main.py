@@ -2,6 +2,7 @@ import os
 import random
 import sys
 import time
+from art import *
 from colored import fg, bg, attr
 
 
