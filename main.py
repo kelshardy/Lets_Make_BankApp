@@ -138,6 +138,32 @@ music_questions = [
     Question(question_prompts[9], "a")
 ]
 
+question_prompts = [
+    "How long is a quarter of an NBA game?\n(a) 20 minutes\n(b) 12 minutes\n(c) 15 minutes\n(d) 10 minutes\nAnswer: ",
+    "In what sport do they play off for the Stanley Cup?\n(a) NFL\n(b) Golf\n(c) EPL\n(d) NHL\nAnswer: ",
+    "Who has the most superbowl titles in NFL history?\n(a) Tom Brady\n(b) Dallas Cowboys\n(c) Pittsburgh Steelers\n(d) New England Patriots\nAnswer: ",
+    "How many players are on the pitch at one time in a game of football/soccer?\n(a) 10\n(b) 11\n(c) 12\n(d) 13\nAnswer: ",
+    "What is the record for the most points scored by a single player in a game of NBA?\n(a) 71\n(b) 91\n(c) 100\n(d) 81\nAnswer: ",
+    "In what year did the VFL become the AFL?\n(a) 1988\n(b) 1989\n(c) 1990\n(d) 1991\nAnswer: ",
+    "The first ever FIFA world cup was won by which country?\n(a) England\n(b) France\n(c) Brazil\n(d) Uruguay\nAnswer: ",
+    "How old was Tiger Woods when he won The Masters for the first time?\n(a) 21\n(b) 19\n(c) 17\n(d) 23\nAnswer: ",
+    "In NFL, a touchdown is worth how many points?\n(a) 5\n(b) 6\n(c) 7\n(d) 8\nAnswer: ",
+    "What is Canada's national sport?\n(a) Ice Hockey\n(b) Shooting\n(c) Handball\n(d) Lacrosse\nAnswer: "
+]
+
+sport_questions = [
+    Question(question_prompts[0], "b"),
+    Question(question_prompts[1], "d"),
+    Question(question_prompts[2], "a"),
+    Question(question_prompts[3], "b"),
+    Question(question_prompts[4], "c"),
+    Question(question_prompts[5], "c"),
+    Question(question_prompts[6], "d"),
+    Question(question_prompts[7], "a"),
+    Question(question_prompts[8], "b"),
+    Question(question_prompts[9], "d")
+]
+
 class Helper:
     def congrats():
         print(f"""{fg('yellow')}
@@ -267,12 +293,12 @@ print(f"""{fg('dark_orange_3a')}
                                 :~J5GB###&&&&#B#B5YG&@^                         
                             .7B@@@@&BBGGB##&@@@@&##@@&:                         
                            :@@&&@@@@@@&&#&&@@@@@@@&#?                           {attr('reset')}============================================
-                           {fg('dark_orange_3a')}?@@BP#&J~77?5B&&&&P^:!?PJ                         {attr('reset')}/                                                 
-                           {fg('dark_orange_3a')}.@@&B#@!    GGGGG#J  :JG&.                       {attr('reset')}/          Round 1: Pick your Category: 
-                            {fg('dark_orange_3a')}G@@@@#      .~^.   ~ :.~G:                     {attr('reset')}/        Movies / TV / Music / Games / Sports 
-            {fg('light_pink_1')}.^:.            P!:~BY      :#~    !?#^..7J:{attr('reset')}                 <<          Answer all correct in each category         
-           {fg('light_pink_1')}.Y. !~          :G  !.     .   .:7^.  ...:7:7Y    {fg('234')}.:^:.{attr('reset')}         \             for a total of $500k! 
-           {fg('light_pink_1')}.Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G {fg('234')}^GG#GBGG~{attr('reset')}        \            type Exit to Quit Game 
+                           {fg('dark_orange_3a')}?@@BP#&J~77?5B&&&&P^:!?PJ                         {attr('reset')}/
+                           {fg('dark_orange_3a')}.@@&B#@!    GGGGG#J  :JG&.                       {attr('reset')}/             Pick your Category:
+                            {fg('dark_orange_3a')}G@@@@#      .~^.   ~ :.~G:                     {attr('reset')}/         Movies, TV, Music, Games or Sports
+            {fg('light_pink_1')}.^:.            P!:~BY      :#~    !?#^..7J:{attr('reset')}                 <<              Win 3 Rounds for
+           {fg('light_pink_1')}.Y. !~          :G  !.     .   .:7^.  ...:7:7Y    {fg('234')}.:^:.{attr('reset')}         \             a total of $500k!
+           {fg('light_pink_1')}.Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G {fg('234')}^GG#GBGG~{attr('reset')}        \          type Exit to Quit Game
          {fg('light_pink_1')}..?!  !^            :@B.   .5:::::. .:^~^~^:    &{fg('234')}^&BGG5G5GB~{attr('reset')}        \\
      {fg('light_pink_1')}:~^!:^P    :J            #B     7&P7^:......:7     ^G{fg('234')}^&BBG5BPBB7{attr('reset')}           =============================================
   {fg('light_pink_1')}.Y7~:!: .?~.  {fg('23')}.&J           {fg('light_pink_1')}~B      J@&&&#B??Y^:.     G~ {fg('234')}?#&G#&#G#5{fg('light_pink_1')}!!?.{attr('reset')}       
@@ -317,9 +343,49 @@ def category_menu():
 {fg('29')}8888P   Y8888 888 888  888 888  888 Y8b.     888      "  
 888P     Y888 888 888  888 888  888  "Y8888  888     888
 {attr('reset')}""")
+            input("You've completed 3 rounds with every answer correct!\nPress Enter:") 
+            print(f"""{fg('dark_orange_3a')}
+                                             .~:..                              
+                                              YB5JGPY.                          
+                                :~J5GB###&&&&#B#B5YG&@^                         
+                            .7B@@@@&BBGGB##&@@@@&##@@&:                         
+                           :@@&&@@@@@@&&#&&@@@@@@@&#?                           {attr('reset')}============================================
+                           {fg('dark_orange_3a')}?@@BP#&J~77?5B&&&&P^:!?PJ                         {attr('reset')}/                                                 
+                           {fg('dark_orange_3a')}.@@&B#@!    GGGGG#J  :JG&.                       {attr('reset')}/          You have won the grand prize 
+                            {fg('dark_orange_3a')}G@@@@#      .~^.   ~ :.~G:                     {attr('reset')}/             of an imaginary $500k! 
+            {fg('light_pink_1')}.^:.            P!:~BY      :#~    !?#^..7J:{attr('reset')}                 <<          ...just let your bank know.
+           {fg('light_pink_1')}.Y. !~          :G  !.     .   .:7^.  ...:7:7Y    {fg('234')}.:^:.{attr('reset')}         \        Don't spend it all at once!     
+           {fg('light_pink_1')}.Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G {fg('234')}^GG#GBGG~{attr('reset')}        \        Thanks for playing, {your_name}!      
+         {fg('light_pink_1')}..?!  !^            :@B.   .5:::::. .:^~^~^:    &{fg('234')}^&BGG5G5GB~{attr('reset')}        \\
+     {fg('light_pink_1')}:~^!:^P    :J            #B     7&P7^:......:7     ^G{fg('234')}^&BBG5BPBB7{attr('reset')}           =============================================
+  {fg('light_pink_1')}.Y7~:!: .?~.  {fg('23')}.&J           {fg('light_pink_1')}~B      J@&&&#B??Y^:.     G~ {fg('234')}?#&G#&#G#5{fg('light_pink_1')}!!?.{attr('reset')}       
+  {fg('light_pink_1')}G~.:.~ ..     {fg('23')}P5G7           {fg('light_pink_1')}P.      ^GPYYPJ757. :   75    {fg('234')}:?#?!Y5.{fg('light_pink_1')}^7?7!{attr('reset')}      
+  {fg('light_pink_1')}Y5:::::^{fg('23')}:JB&~?J!!#^         {fg('light_pink_1')}.Y#        .^~~~~^: .5  !5      {fg('234')}!~ .  P7 {fg('light_pink_1')}.~GJ{attr('reset')}    
+   {fg('light_pink_1')}.:...  {fg('23')}^#B#57!7!?#.     .7PGJP#:               {fg('light_pink_1')}^J 7J        {fg('234')}Y^.~~G5J?. {fg('light_pink_1')}^5{attr('reset')}   
+           {fg('23')}?G7!!777!JB::!YGGY7!!!GG7^            :!^BB         G&?  {fg('234')}.Y&?:?PB{attr('reset')}    
+            {fg('23')}^BY!!!!!!?BGYJ7!!!!!!!G5?J?7!!~:  ..??!BB5P.      PP75:.YJ{fg('234')}?##Y75G~{attr('reset')}  
+              {fg('23')}5G7!!77!!7!!7!!!77!!?G5GPG^::~P5~JP^.~G~?G!    P5!!7JP@B? {fg('234')}.5BP#Y{attr('reset')}  
+               {fg('23')}^G57!!!!!!!!7JGB?7YJJ5JJB~:~7P&?PP!^?P?!!YP!!GY!!!!!7JGP   {fg('234')}.^.{attr('reset')}   
+                 {fg('23')}~5PYJJJYY5J^PB!PB5BBP7?55BBBP!GGG55?B!7!7PP7!777!!YP~          
+                   .:~!!~:   5P!7?JY5PP7!77!?YB&J77!PP!7!!!!!7!!75G7            
+                             GY!!!!!!!!77!!7!!?GY!!!#P?!!!!!!!?PG?              
+                             GJ!777777777777!GBGJ~~?P:J5YJJY5PY~                
+                             B7!777777777777!JY#7!~#^   .^^:.                   
+                            .&7!777777777777PGYG!!JB                            
+                            .&?7!!!!!77777!7GPB?!!#~                            
+                             :!YG5J?7!!!!!!!!JP775B                             
+                                #5PGGGPPPPPPP##Y?!.                             
+                                B7!!77?YJ?JJ?G5                                 
+                                B7!!!7#&J!!!JG                                  
+                                B7!!!7&#7!!?B.                                  
+                                B7!!!Y#G!!!B^                                   
+                               .#J?77GGP!7GJ                                    
+                            {fg('232')}:JB@@@@@@BB@@@@@BJ^                                 
+                         :G&@@@&#B&#G:~G##B&@@@@B7                              
+{attr('reset')}""")
             return
 
-        user_decision = input("What category would you like to play?: ")
+        user_decision = input("What category would you like to play? Movies / TV / Music / Games / Sport: ")
 
         if (user_decision.lower() == "games"):
             os.system('clear')
@@ -348,6 +414,13 @@ def category_menu():
             Helper.congrats()
             correct_categories += 1
             continue
+        
+        if (user_decision.lower() == "sport"):
+            os.system('clear')
+            ask_questions(sport_questions)
+            Helper.congrats()
+            correct_categories += 1
+            continue
 
         if (user_decision.lower() == "exit"):
             return
@@ -357,5 +430,3 @@ def category_menu():
             continue
 
 category_menu()
-
-print(f"Thanks for playing, {your_name}!")

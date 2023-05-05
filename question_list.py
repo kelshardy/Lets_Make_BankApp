@@ -110,7 +110,7 @@ question_prompts = [
     "Who sings the rock song, 'You Shook Me All Night Long'?\n(a) AC/DC\n(b) Kiss\n(c) Aerosmith\n(d) Guns N' Roses\nAnswer: "
 ]
 
-game_questions = [
+music_questions = [
     Question(question_prompts[0], "c"),
     Question(question_prompts[1], "a"),
     Question(question_prompts[2], "d"),
@@ -121,4 +121,30 @@ game_questions = [
     Question(question_prompts[7], "a"),
     Question(question_prompts[8], "c"),
     Question(question_prompts[9], "a")
+]
+
+question_prompts = [
+    "How long is a quarter of an NBA game?\n(a) 20 minutes\n(b) 12 minutes\n(c) 15 minutes\n(d) 10 minutes\nAnswer: ",
+    "In what sport do they play off for the Stanley Cup?\n(a) NFL\n(b) Golf\n(c) EPL\n(d) NHL\nAnswer: ",
+    "Who has the most superbowl titles in NFL history?\n(a) Tom Brady\n(b) Dallas Cowboys\n(c) Pittsburgh Steelers\n(d) New England Patriots\nAnswer: ",
+    "How many players are on the pitch at one time in a game of football/soccer?\n(a) 10\n(b) 11\n(c) 12\n(d) 13\nAnswer: ",
+    "What is the record for the most points scored by a single player in a game of NBA?\n(a) 71\n(b) 91\n(c) 100\n(d) 81\nAnswer: ",
+    "In what year did the VFL become the AFL?\n(a) 1988\n(b) 1989\n(c) 1990\n(d) 1991\nAnswer: ",
+    "The first ever FIFA world cup was won by which country?\n(a) England\n(b) France\n(c) Brazil\n(d) Uruguay\nAnswer: ",
+    "How old was Tiger Woods when he won The Masters for the first time?\n(a) 21\n(b) 19\n(c) 17\n(d) 23\nAnswer: ",
+    "In NFL, a touchdown is worth how many points?\n(a) 5\n(b) 6\n(c) 7\n(d) 8\nAnswer: ",
+    "What is Canada's national sport?\n(a) Ice Hockey\n(b) Shooting\n(c) Handball\n(d) Lacrosse\nAnswer: "
+]
+
+sport_questions = [
+    Question(question_prompts[0], "b"),
+    Question(question_prompts[1], "d"),
+    Question(question_prompts[2], "a"),
+    Question(question_prompts[3], "b"),
+    Question(question_prompts[4], "c"),
+    Question(question_prompts[5], "c"),
+    Question(question_prompts[6], "d"),
+    Question(question_prompts[7], "a"),
+    Question(question_prompts[8], "b"),
+    Question(question_prompts[9], "d")
 ]
