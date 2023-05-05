@@ -112,6 +112,32 @@ tv_questions = [
     Question(question_prompts[9], "b")
 ]
 
+question_prompts = [
+    "Which classical composer was deaf?\n(a) Chopin\n(b) Brahms\n(c) Beethoven\n(d) Tchaikovsky\nAnswer: ",
+    "What band features frontman, Jared Leto?\n(a) 30 Seconds to Mars\n(b) Three Days Grace\n(c) Fall Out Boy\n(d) Weezer\nAnswer: ",
+    "Some fans believed that this particular Beatle had actually died and been replaced by a double:\n(a) Ringo\n(b) John\n(c) George\n(d) Paul\nAnswer: ",
+    "Which cover did Andy Warhol design for The Rolling Stones?\n(a) Exile on Main St.\n(b) Let It Bleed\n(c) Sticky Fingers\n(d) Goats Head Soup\nAnswer: ",
+    "What was the name of Elvis Presley's daughter?\n(a) Gladys\n(b) Lisa-Marie\n(c) Priscilla\n(d) Dottie\nAnswer: ",
+    "Justin Timberlake was part of which boy band originally?\n(a) Backstreet Boys\n(b) NSYNC\n(c) Westlife\n(d) Five\nAnswer: ",
+    "Which actor used to be known by his stage name, Marky Mark?\n(a) Mark Ruffalo\n(b) Mark Hamill\n(c) Mark Strong\n(d) Mark Wahlberg\nAnswer: ",
+    "Beyonce was originally part of which girl group?\n(a) Destiny's Child\n(b) TLC\n(c) Spice Girls\n(d) Pussycat Dolls\nAnswer: ",
+    "Who sung the one hit wonder, 'Breakfast At Tiffany's'?\n(a) Semisonic\n(b) Fountains of Wayne\n(c) Deep Blue Something\n(d) Wheatus\nAnswer: ",
+    "Who sings the rock song, 'You Shook Me All Night Long'?\n(a) AC/DC\n(b) Kiss\n(c) Aerosmith\n(d) Guns N' Roses\nAnswer: "
+]
+
+music_questions = [
+    Question(question_prompts[0], "c"),
+    Question(question_prompts[1], "a"),
+    Question(question_prompts[2], "d"),
+    Question(question_prompts[3], "c"),
+    Question(question_prompts[4], "b"),
+    Question(question_prompts[5], "b"),
+    Question(question_prompts[6], "d"),
+    Question(question_prompts[7], "a"),
+    Question(question_prompts[8], "c"),
+    Question(question_prompts[9], "a")
+]
+
 class Helper:
     def congrats():
         print(f"""{fg('yellow')}
@@ -243,9 +269,9 @@ print(f"""{fg('dark_orange_3a')}
                            :@@&&@@@@@@&&#&&@@@@@@@&#?                           {attr('reset')}============================================
                            {fg('dark_orange_3a')}?@@BP#&J~77?5B&&&&P^:!?PJ                         {attr('reset')}/                                                 
                            {fg('dark_orange_3a')}.@@&B#@!    GGGGG#J  :JG&.                       {attr('reset')}/          Round 1: Pick your Category: 
-                            {fg('dark_orange_3a')}G@@@@#      .~^.   ~ :.~G:                     {attr('reset')}/      Movies / TV / Music / Games / Sports / Books
+                            {fg('dark_orange_3a')}G@@@@#      .~^.   ~ :.~G:                     {attr('reset')}/        Movies / TV / Music / Games / Sports 
             {fg('light_pink_1')}.^:.            P!:~BY      :#~    !?#^..7J:{attr('reset')}                 <<          Answer all correct in each category         
-           {fg('light_pink_1')}.Y. !~          :G  !.     .   .:7^.  ...:7:7Y    {fg('234')}.:^:.{attr('reset')}         \             for a total of $200k! 
+           {fg('light_pink_1')}.Y. !~          :G  !.     .   .:7^.  ...:7:7Y    {fg('234')}.:^:.{attr('reset')}         \             for a total of $500k! 
            {fg('light_pink_1')}.Y  J.           ?7:7:   ^B?.    ^~..    .?. ^G {fg('234')}^GG#GBGG~{attr('reset')}        \            type Exit to Quit Game 
          {fg('light_pink_1')}..?!  !^            :@B.   .5:::::. .:^~^~^:    &{fg('234')}^&BGG5G5GB~{attr('reset')}        \\
      {fg('light_pink_1')}:~^!:^P    :J            #B     7&P7^:......:7     ^G{fg('234')}^&BBG5BPBB7{attr('reset')}           =============================================
@@ -312,6 +338,13 @@ def category_menu():
         if (user_decision.lower() == "tv"):
             os.system('clear')
             ask_questions(tv_questions)
+            Helper.congrats()
+            correct_categories += 1
+            continue
+
+        if (user_decision.lower() == "music"):
+            os.system('clear')
+            ask_questions(music_questions)
             Helper.congrats()
             correct_categories += 1
             continue
