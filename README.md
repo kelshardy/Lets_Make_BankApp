@@ -28,11 +28,21 @@ Keep track of player progress, resets at New Game. - Will redo based on educator
 ## Help Documentation
 
 ### How to install
-
+ 
 ### Dependencies
-
+As this is a Python-based terminal application, it will require the latest version of Python3 to be installed before it can run.
+The following Python packages should be installed before running this code:
+- art
+- ascii-magic
+- colorama
+- colored
+- iniconfig
+- packaging
+- Pillow
+- pluggy
+- pytest
 ### System or hardware equirements
-
+The terminal application
 ### How to play
 
 
