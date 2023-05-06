@@ -28,7 +28,7 @@ Keep track of player progress, resets at New Game. - Will redo based on educator
 ## Help Documentation
 
 ### How to install
- 
+./run.sh will run the file on Mac
 ### Dependencies
 As this is a Python-based terminal application, it will require the latest version of Python3 to be installed before it can run.
 The following Python packages should be installed before running this code:
@@ -41,9 +41,12 @@ The following Python packages should be installed before running this code:
 - Pillow
 - pluggy
 - pytest
-### System or hardware equirements
-The terminal application
-### How to play
+### System / Hardware Requirements
+The terminal application will run on most operating systems.
+It is recommended that the terminal have 40 lines available as this will look best for the display of this app. 
+This can be achieved using ```tput lines``` which will measure out the height of the terminal.
+As this Terminal Application was created with a dark theme, it would be best displayed that way.
+### How to Play
 
 
 
