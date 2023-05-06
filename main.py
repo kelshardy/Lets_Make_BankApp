@@ -4,7 +4,6 @@ import sys
 import time
 from colored import fg, bg, attr
 
-
 class Question:
     def __init__(self, prompt, answer):
         self.prompt = prompt
@@ -163,6 +162,7 @@ sport_questions = [
     Question(question_prompts[9], "d")
 ]
 
+
 class Helper:
     def congrats():
         print(f"""{fg('yellow')}
@@ -195,6 +195,7 @@ def press_start():
   {attr('reset')}""")
     print_slow("Press Enter to Start...")
     input()
+
 
 press_start()
 
@@ -342,7 +343,7 @@ def category_menu():
 {fg('29')}8888P   Y8888 888 888  888 888  888 Y8b.     888      "  
 888P     Y888 888 888  888 888  888  "Y8888  888     888
 {attr('reset')}""")
-            input("You've completed 3 rounds with every answer correct!\nPress Enter:") 
+            input("You've completed 3 rounds with every answer correct!\nPress Enter:")
             print(f"""{fg('dark_orange_3a')}
                                              .~:..                              
                                               YB5JGPY.                          
@@ -384,7 +385,8 @@ def category_menu():
 {attr('reset')}""")
             return
 
-        user_decision = input("What category would you like to play? Movies / TV / Music / Games / Sport: ")
+        user_decision = input(
+            "What category would you like to play? Movies / TV / Music / Games / Sport: ")
 
         if (user_decision.lower() == "games"):
             os.system('clear')
@@ -413,7 +415,7 @@ def category_menu():
             Helper.congrats()
             correct_categories += 1
             continue
-        
+
         if (user_decision.lower() == "sport"):
             os.system('clear')
             ask_questions(sport_questions)
@@ -427,5 +429,6 @@ def category_menu():
             print("Error: Category doesn't exist.")
             print("Please enter a Category or type Exit")
             continue
+
 
 category_menu()
