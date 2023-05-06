@@ -1,5 +1,6 @@
 # Let's Make Bank 
 
+![LMBLogo](/docs/LMBLogo.png)
 ## Referenced Material
 ___
 As a reference for this terminal application, *Who Wants to Be a Millionaire?* is the basis for this concept.
@@ -27,7 +28,7 @@ ___
 - The trivia questions (which there are 10 of for each category in the code) will play 5 questions at random to keep the content different for each playthrough.
 - If the user enters an incorrect response, the code will break to end the game with a 'Thanks for playing' ending. With user response, if an invalid input is made (for instance, the user inputs 'x' to an a, b, c or d only answer), the app will explain the error and request a new input.
 
-## Implentation Plan
+## Implementation Plan
 ___
 ### How each feature will be implemented. Provide a time indicator and checklist of tasks for each feature - 
 
@@ -66,14 +67,18 @@ ___
     * Include in endgame
     * Apply f in necessary strings
 
+> A few screenshots from the Trello Board:
+Used for the management of this project
+![FirstScreenshot](/docs/First_Trello.png)
+![ThirdScreenshot](/docs/Third_Trello.png)
+![FifthScreenshot](/docs/Fifth_Trello.png)
 
-
-Here is the link to the [Trello Board](https://trello.com/b/Apz6utPT/terminal-app)
+Here is the link to the [Trello Board](https://trello.com/b/Apz6utPT/terminal-app).
 ## Help Documentation
 ___
 ### *How to Install*
 
-To install this file, access can be achieved from the green button ```<>Code``` in the top right-hand corner of the GitHub Repo, and clicking on the ```Download ZIP``` button. Alternatively click on this link [here](/Terminal_Application-main.zip).
+To install this file, access can be achieved from the green button ```<>Code``` in the top right-hand corner of the GitHub Repo, and clicking on the ```Download ZIP``` button. Alternatively click on this link [here](/src/Terminal_Application.zip)
 This file can be install and executed by entering the bash script ```./run.sh``` in the terminal, which will prompt a series of commands, including installing the required packages for this application.
 
 
@@ -99,6 +104,7 @@ As this Terminal Application was created with a dark theme, it would be best dis
 
 ### *How to Play*
 
+![GameHost](/docs/Game_Host.png)
 To start 'Let's Make Bank' the player is prompted to Press Enter to begin. The application then requests the user name for a personalized experience.
 
 The player then keys in a category to take part in a small trivia quiz based on the subject. During this, the player chooses a response to each question using either a, b, c or d. 
