@@ -4,6 +4,7 @@ import sys
 import time
 from colored import fg, bg, attr
 
+
 class Question:
     def __init__(self, prompt, answer):
         self.prompt = prompt
@@ -33,16 +34,16 @@ def ask_questions(questions):
 
 
 question_prompts = [
-    "What is Hermione Granger's middle name?\n(a) Jean\n(b) Luna\n(c) Emma\n(d) Rose\nAnswer: ",
-    "Who is Frodo's best friend in The Lord Of the Rings Trilogy\n(a) Legolas\n(b) Bilbo Baggins\n(c) Gollum\n(d) Samwise Gamgee\nAnswer: ",
-    "How many Oceans films have been released?\n(a) 3\n(b) 1\n(c) 4\n(d) 5\nAnswer: ",
-    "Who does Keanu Reeves play in the Matrix series?\n(a) Morpheus\n(b) Neo\n(c) Trinity\n(d) Agent Smith\nAnswer: ",
-    "What movie has the longest run-time in Hollywood?\n(a) Gone With The Wind\n(b) Cleopatra\n(c) Titanic\n(d) Avatar: The Way Of The Water\nAnswer: ",
-    "What name is given to the human character in Monsters Inc.?\n(a) Sully\n(b) Celia\n(c) Boo\n(d) 23-19\nAnswer: ",
-    "What is the Tin Man missing in The Wizard Of Oz\n(a) Heart\n(b) Courage\n(c) Brains\n(d) Home\nAnswer: ",
-    "One what day does the first Die Hard movie take place?\n(a) Thanksgiving\n(b) Good Friday\n(c) Halloween\n(d) Christmas Eve\nAnswer: ",
-    "What was the name of Marty's band in Back To The Future?\n(a) The Pinheads\n(b) The Blockheads\n(c) The Eggheads\n(d) The Coneheads\nAnswer: ",
-    "Who played Cher in Clueless?\n(a) Lindsay Lohan\n(b) Alicia Silverstone\n(c) Rachel McAdams\n(d) Heather Graham\nAnswer: "
+    f"{fg('89')}What is Hermione Granger's middle name?{attr('reset')}\n(a) Jean\n(b) Luna\n(c) Emma\n(d) Rose\nAnswer: ",
+    f"{fg('89')}Who is Frodo's best friend in The Lord Of the Rings Trilogy?{attr('reset')}\n(a) Legolas\n(b) Bilbo Baggins\n(c) Gollum\n(d) Samwise Gamgee\nAnswer: ",
+    f"{fg('89')}How many Oceans films have been released?{attr('reset')}\n(a) 3\n(b) 1\n(c) 89\n(d) 5\nAnswer: ",
+    f"{fg('89')}Who does Keanu Reeves play in the Matrix series?{attr('reset')}\n(a) Morpheus\n(b) Neo\n(c) Trinity\n(d) Agent Smith\nAnswer: ",
+    f"{fg('89')}What movie has the longest run-time in Hollywood?{attr('reset')}\n(a) Gone With The Wind\n(b) Cleopatra\n(c) Titanic\n(d) Avatar: The Way Of The Water\nAnswer: ",
+    f"{fg('89')}What name is given to the human character in Monsters Inc.?{attr('reset')}\n(a) Sully\n(b) Celia\n(c) Boo\n(d) 23-19\nAnswer: ",
+    f"{fg('89')}What is the Tin Man missing in The Wizard Of Oz?{attr('reset')}\n(a) Heart\n(b) Courage\n(c) Brains\n(d) Home\nAnswer: ",
+    f"{fg('89')}One what day does the first Die Hard movie take place?{attr('reset')}\n(a) Thanksgiving\n(b) Good Friday\n(c) Halloween\n(d) Christmas Eve\nAnswer: ",
+    f"{fg('89')}What was the name of Marty's band in Back To The Future?{attr('reset')}\n(a) The Pinheads\n(b) The Blockheads\n(c) The Eggheads\n(d) The Coneheads\nAnswer: ",
+    f"{fg('89')}Who played Cher in Clueless?{attr('reset')}\n(a) Lindsay Lohan\n(b) Alicia Silverstone\n(c) Rachel McAdams\n(d) Heather Graham\nAnswer: "
 ]
 
 movie_questions = [
@@ -59,16 +60,16 @@ movie_questions = [
 ]
 
 question_prompts = [
-    "What is the name of the player character in Uncharted?\n(a) Victor Sullivan\n(b) Nathan Drake\n(c) Max Payne\n(d) Big Boss\nAnswer: ",
-    "What is Joel's surname in The Last Of Us?\n(a) Smith\n(b) Harrison\n(c) Miller\n(d) Garrett\nAnswer: ",
-    "Who does Atreus turn out to be in God Of War?\n(a) Loki\n(b) Kratos\n(c) Zeus\n(d) Thor\nAnswer: ",
-    "Which company created Super Mario?\n(a) Sony\n(b) Nintendo\n(c) Microsoft\n(d) Atari\nAnswer: ",
-    "What colour is Luigi's hat in Super Mario?\n(a) Yellow\n(b) Red\n(c) Blue\n(d) Green\nAnswer: ",
-    "What is the alias of the main antogonist in Bioshock?\n(a) Andrew Ryan\n(b) ADAM\n(c) Atlas\n(d) Frank Fontaine\nAnswer: ",
-    "What is the name of the jungle that naked snake is dropped into at the beginning on of Metal Gear Solid 3: Snake Eater\n(a) Semipalatinsk\n(b) Stalingrad\n(c) Ural Mountains\n(d) Tselinoyarsk\nAnswer: ",
-    "Which character doesn't swear in The Last Of Us Part 1?\n(a) Tommy\n(b) Ellie\n(c) Joel\n(d) David\nAnswer: ",
-    "According to Metacritic, what is the highest rated game of all-time?\n(a) Tony Hawk Pro Skater 2\n(b) Grand Theft Auto V\n(c) The Legend Of Zelda: Ocarina Of Time\n(d) Elden Ring\nAnswer: ",
-    "The Umbrella Corporation is a fictitious pharmaceutical company in what game?\n(a) Resident Evil\n(b) Dino Crisis\n(c) Clock Tower\n(d) Project Zero\nAnswer: "
+    f"{fg('4')}What is the name of the player character in Uncharted?{attr('reset')}\n(a) Victor Sullivan\n(b) Nathan Drake\n(c) Max Payne\n(d) Big Boss\nAnswer: ",
+    f"{fg('4')}What is Joel's surname in The Last Of Us?{attr('reset')}\n(a) Smith\n(b) Harrison\n(c) Miller\n(d) Garrett\nAnswer: ",
+    f"{fg('4')}Who does Atreus turn out to be in God Of War?{attr('reset')}\n(a) Loki\n(b) Kratos\n(c) Zeus\n(d) Thor\nAnswer: ",
+    f"{fg('4')}Which company created Super Mario?{attr('reset')}\n(a) Sony\n(b) Nintendo\n(c) Microsoft\n(d) Atari\nAnswer: ",
+    f"{fg('4')}What colour is Luigi's hat in Super Mario?{attr('reset')}\n(a) Yellow\n(b) Red\n(c) Blue\n(d) Green\nAnswer: ",
+    f"{fg('4')}What is the alias of the main antogonist in Bioshock?{attr('reset')}\n(a) Andrew Ryan\n(b) ADAM\n(c) Atlas\n(d) Frank Fontaine\nAnswer: ",
+    f"{fg('4')}What is the name of the jungle that naked snake is dropped into at the beginning on of Metal Gear Solid 3: Snake Eater{attr('reset')}\n(a) Semipalatinsk\n(b) Stalingrad\n(c) Ural Mountains\n(d) Tselinoyarsk\nAnswer: ",
+    f"{fg('4')}Which character doesn't swear in The Last Of Us Part 1?{attr('reset')}\n(a) Tommy\n(b) Ellie\n(c) Joel\n(d) David\nAnswer: ",
+    f"{fg('4')}According to Metacritic, what is the highest rated game of all-time?{attr('reset')}\n(a) Tony Hawk Pro Skater 2\n(b) Grand Theft Auto V\n(c) The Legend Of Zelda: Ocarina Of Time\n(d) Elden Ring\nAnswer: ",
+    f"{fg('4')}The Umbrella Corporation is a fictitious pharmaceutical company in what game?{attr('reset')}\n(a) Resident Evil\n(b) Dino Crisis\n(c) Clock Tower\n(d) Project Zero\nAnswer: "
 ]
 
 game_questions = [
@@ -85,16 +86,16 @@ game_questions = [
 ]
 
 question_prompts = [
-    "What was the mother's name in How I Met Your Mother?\n(a) Stella\n(b) Zoe\n(c) Tracy\n(d) Robin\nAnswer: ",
-    "What was Ross's surname in Friends?\n(a) Green\n(b) Geller\n(c) Bing\n(d) Buffay\nAnswer: ",
-    "Who played Michael Kelso in That 70s Show?\n(a) Ashton Kutcher\n(b) Topher Grace\n(c) Eric Foreman\n(d) Wilmer Valderrama\nAnswer: ",
-    "What is the name of the hospital in Scrubs\n(a) County General\n(b) Seattle Grace\n(c) San Jose St. Bonaventure\n(d) Sacred Heart\nAnswer: ",
-    "What is the family's last name in Arrested Development?\n(a) Sitwell\n(b) Bluth\n(c) Michael\n(d) Bateman\nAnswer: ",
-    "What was the name of Captain Holt's dog in Brooklyn Nine-Nine?\n(a) Bruce\n(b) Arlo\n(c) Terry\n(d) Cheddar\nAnswer: ",
-    "In the kids tv series, Bluey, who is Bluey's father?\n(a) Bandit\n(b) Chilli\n(c) Stripe\n(d) Bingo\nAnswer: ",
-    "What subject did Walter White teach in Breaking Bad?\n(a) Math\n(b) Physical Education\n(c) Chemistry\n(d) Biology\nAnswer: ",
-    "What is the name of the pet dog in The Simpsons\n(a) Spike\n(b) Snowball\n(c) Odie\n(d) Santa's Little Helper\nAnswer: ",
-    "What game do the boys of Stranger Things like to play?\n(a) Tag\n(b) Dungeons and Dragons\n(c) Yahtzee\n(d) Baldur's Gate\nAnswer: "
+    f"{fg('205')}What was the mother's name in How I Met Your Mother?{attr('reset')}\n(a) Stella\n(b) Zoe\n(c) Tracy\n(d) Robin\nAnswer: ",
+    f"{fg('205')}What was Ross's surname in Friends?{attr('reset')}\n(a) Green\n(b) Geller\n(c) Bing\n(d) Buffay\nAnswer: ",
+    f"{fg('205')}Who played Michael Kelso in That 70s Show?{attr('reset')}\n(a) Ashton Kutcher\n(b) Topher Grace\n(c) Eric Foreman\n(d) Wilmer Valderrama\nAnswer: ",
+    f"{fg('205')}What is the name of the hospital in Scrubs{attr('reset')}\n(a) County General\n(b) Seattle Grace\n(c) San Jose St. Bonaventure\n(d) Sacred Heart\nAnswer: ",
+    f"{fg('205')}What is the family's last name in Arrested Development?{attr('reset')}\n(a) Sitwell\n(b) Bluth\n(c) Michael\n(d) Bateman\nAnswer: ",
+    f"{fg('205')}What was the name of Captain Holt's dog in Brooklyn Nine-Nine?{attr('reset')}\n(a) Bruce\n(b) Arlo\n(c) Terry\n(d) Cheddar\nAnswer: ",
+    f"{fg('205')}In the kids tv series, Bluey, who is Bluey's father?{attr('reset')}\n(a) Bandit\n(b) Chilli\n(c) Stripe\n(d) Bingo\nAnswer: ",
+    f"{fg('205')}What subject did Walter White teach in Breaking Bad?{attr('reset')}\n(a) Math\n(b) Physical Education\n(c) Chemistry\n(d) Biology\nAnswer: ",
+    f"{fg('205')}What is the name of the pet dog in The Simpsons{attr('reset')}\n(a) Spike\n(b) Snowball\n(c) Odie\n(d) Santa's Little Helper\nAnswer: ",
+    f"{fg('205')}What game do the boys of Stranger Things like to play?{attr('reset')}\n(a) Tag\n(b) Dungeons and Dragons\n(c) Yahtzee\n(d) Baldur's Gate\nAnswer: "
 ]
 
 tv_questions = [
@@ -111,16 +112,16 @@ tv_questions = [
 ]
 
 question_prompts = [
-    "Which classical composer was deaf?\n(a) Chopin\n(b) Brahms\n(c) Beethoven\n(d) Tchaikovsky\nAnswer: ",
-    "What band features frontman, Jared Leto?\n(a) 30 Seconds to Mars\n(b) Three Days Grace\n(c) Fall Out Boy\n(d) Weezer\nAnswer: ",
-    "Some fans believed that this particular Beatle had actually died and been replaced by a double:\n(a) Ringo\n(b) John\n(c) George\n(d) Paul\nAnswer: ",
-    "Which cover did Andy Warhol design for The Rolling Stones?\n(a) Exile on Main St.\n(b) Let It Bleed\n(c) Sticky Fingers\n(d) Goats Head Soup\nAnswer: ",
-    "What was the name of Elvis Presley's daughter?\n(a) Gladys\n(b) Lisa-Marie\n(c) Priscilla\n(d) Dottie\nAnswer: ",
-    "Justin Timberlake was part of which boy band originally?\n(a) Backstreet Boys\n(b) NSYNC\n(c) Westlife\n(d) Five\nAnswer: ",
-    "Which actor used to be known by his stage name, Marky Mark?\n(a) Mark Ruffalo\n(b) Mark Hamill\n(c) Mark Strong\n(d) Mark Wahlberg\nAnswer: ",
-    "Beyonce was originally part of which girl group?\n(a) Destiny's Child\n(b) TLC\n(c) Spice Girls\n(d) Pussycat Dolls\nAnswer: ",
-    "Who sung the one hit wonder, 'Breakfast At Tiffany's'?\n(a) Semisonic\n(b) Fountains of Wayne\n(c) Deep Blue Something\n(d) Wheatus\nAnswer: ",
-    "Who sings the rock song, 'You Shook Me All Night Long'?\n(a) AC/DC\n(b) Kiss\n(c) Aerosmith\n(d) Guns N' Roses\nAnswer: "
+    f"{fg('62')}Which classical composer was deaf?{attr('reset')}\n(a) Chopin\n(b) Brahms\n(c) Beethoven\n(d) Tchaikovsky\nAnswer: ",
+    f"{fg('62')}What band features frontman, Jared Leto?{attr('reset')}\n(a) 30 Seconds to Mars\n(b) Three Days Grace\n(c) Fall Out Boy\n(d) Weezer\nAnswer: ",
+    f"{fg('62')}Some fans believed that this particular Beatle had actually died and been replaced by a double:{attr('reset')}\n(a) Ringo\n(b) John\n(c) George\n(d) Paul\nAnswer: ",
+    f"{fg('62')}Which cover did Andy Warhol design for The Rolling Stones?{attr('reset')}\n(a) Exile on Main St.\n(b) Let It Bleed\n(c) Sticky Fingers\n(d) Goats Head Soup\nAnswer: ",
+    f"{fg('62')}What was the name of Elvis Presley's daughter?{attr('reset')}\n(a) Gladys\n(b) Lisa-Marie\n(c) Priscilla\n(d) Dottie\nAnswer: ",
+    f"{fg('62')}Justin Timberlake was part of which boy band originally?{attr('reset')}\n(a) Backstreet Boys\n(b) NSYNC\n(c) Westlife\n(d) Five\nAnswer: ",
+    f"{fg('62')}Which actor used to be known by his stage name, Marky Mark?{attr('reset')}\n(a) Mark Ruffalo\n(b) Mark Hamill\n(c) Mark Strong\n(d) Mark Wahlberg\nAnswer: ",
+    f"{fg('62')}Beyonce was originally part of which girl group?{attr('reset')}\n(a) Destiny's Child\n(b) TLC\n(c) Spice Girls\n(d) Pussycat Dolls\nAnswer: ",
+    f"{fg('62')}Who sung the one hit wonder, 'Breakfast At Tiffany's'?{attr('reset')}\n(a) Semisonic\n(b) Fountains of Wayne\n(c) Deep Blue Something\n(d) Wheatus\nAnswer: ",
+    f"{fg('62')}Who sings the rock song, 'You Shook Me All Night Long'?{attr('reset')}\n(a) AC/DC\n(b) Kiss\n(c) Aerosmith\n(d) Guns N' Roses\nAnswer: "
 ]
 
 music_questions = [
@@ -137,16 +138,16 @@ music_questions = [
 ]
 
 question_prompts = [
-    "How long is a quarter of an NBA game?\n(a) 20 minutes\n(b) 12 minutes\n(c) 15 minutes\n(d) 10 minutes\nAnswer: ",
-    "In what sport do they play off for the Stanley Cup?\n(a) NFL\n(b) Golf\n(c) EPL\n(d) NHL\nAnswer: ",
-    "Who has the most superbowl titles in NFL history?\n(a) Tom Brady\n(b) Dallas Cowboys\n(c) Pittsburgh Steelers\n(d) New England Patriots\nAnswer: ",
-    "How many players are on the pitch at one time in a game of football/soccer?\n(a) 10\n(b) 11\n(c) 12\n(d) 13\nAnswer: ",
-    "What is the record for the most points scored by a single player in a game of NBA?\n(a) 71\n(b) 91\n(c) 100\n(d) 81\nAnswer: ",
-    "In what year did the VFL become the AFL?\n(a) 1988\n(b) 1989\n(c) 1990\n(d) 1991\nAnswer: ",
-    "The first ever FIFA world cup was won by which country?\n(a) England\n(b) France\n(c) Brazil\n(d) Uruguay\nAnswer: ",
-    "How old was Tiger Woods when he won The Masters for the first time?\n(a) 21\n(b) 19\n(c) 17\n(d) 23\nAnswer: ",
-    "In NFL, a touchdown is worth how many points?\n(a) 5\n(b) 6\n(c) 7\n(d) 8\nAnswer: ",
-    "What is Canada's national sport?\n(a) Ice Hockey\n(b) Shooting\n(c) Handball\n(d) Lacrosse\nAnswer: "
+    f"{fg('114')}How long is a quarter of an NBA game?{attr('reset')}\n(a) 20 minutes\n(b) 12 minutes\n(c) 15 minutes\n(d) 10 minutes\nAnswer: ",
+    f"{fg('114')}In what sport do they play off for the Stanley Cup?{attr('reset')}\n(a) NFL\n(b) Golf\n(c) EPL\n(d) NHL\nAnswer: ",
+    f"{fg('114')}Who has the most superbowl titles in NFL history?{attr('reset')}\n(a) Tom Brady\n(b) Dallas Cowboys\n(c) Pittsburgh Steelers\n(d) New England Patriots\nAnswer: ",
+    f"{fg('114')}How many players are on the pitch at one time in a game of football/soccer?{attr('reset')}\n(a) 10\n(b) 11\n(c) 12\n(d) 13\nAnswer: ",
+    f"{fg('114')}What is the record for the most points scored by a single player in a game of NBA?{attr('reset')}\n(a) 71\n(b) 91\n(c) 100\n(d) 81\nAnswer: ",
+    f"{fg('114')}In what year did the VFL become the AFL?{attr('reset')}\n(a) 1988\n(b) 1989\n(c) 1990\n(d) 1991\nAnswer: ",
+    f"{fg('114')}The first ever FIFA world cup was won by which country?{attr('reset')}\n(a) England\n(b) France\n(c) Brazil\n(d) Uruguay\nAnswer: ",
+    f"{fg('114')}How old was Tiger Woods when he won The Masters for the first time?{attr('reset')}\n(a) 21\n(b) 19\n(c) 17\n(d) 23\nAnswer: ",
+    f"{fg('114')}In NFL, a touchdown is worth how many points?{attr('reset')}\n(a) 5\n(b) 6\n(c) 7\n(d) 8\nAnswer: ",
+    f"{fg('114')}What is Canada's national sport?{attr('reset')}\n(a) Ice Hockey\n(b) Shooting\n(c) Handball\n(d) Lacrosse\nAnswer: "
 ]
 
 sport_questions = [
