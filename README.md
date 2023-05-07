@@ -9,7 +9,9 @@ With each question asked, four possible answers are generated and the user picks
 
 ## Link to Source Control Repo
 ___
-Here is the [GitHub Link](https://github.com/kelshardy/Terminal_Application) to Let's Make Bank.
+Here is the [GitHub Link](https://github.com/kelshardy/Terminal_Application) to my terminal application, Let's Make Bank.
+
+Here is a link to the [Video Presentation](https://youtu.be/AC6z50RA2RY).
 
 ## Code Styling / Styling Conventions
 ___
@@ -78,7 +80,8 @@ Here is the link to the [Trello Board](https://trello.com/b/Apz6utPT/terminal-ap
 ___
 ### *How to Install*
 
-To install this file, access can be achieved from the green button ```<>Code``` in the top right-hand corner of the GitHub Repo, and clicking on the ```Download ZIP``` button. Alternatively click on this link [here](/src/Terminal_Application.zip)
+To install this file, access can be achieved from the green button ```<>Code``` in the top right-hand corner of the GitHub Repo, and clicking on the ```Download ZIP``` button. Alternatively click on this link [here](https://github.com/kelshardy/Terminal_Application/archive/refs/heads/main.zip).
+
 This file can be install and executed by entering the bash script ```./run.sh``` in the terminal, which will prompt a series of commands, including installing the required packages for this application.
 
 
@@ -112,8 +115,3 @@ The player then keys in a category to take part in a small trivia quiz based on 
 If the player answers incorrectly, the terminal application thanks the user for playing and closes.
 If the player answers the five questions in the category correctly, they are prompted to choose another category and answer the next series of questions.
 The player must correctly answer 3 categories to win the game.
-
-
-
-
-
